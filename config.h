@@ -53,7 +53,7 @@ static const int refreshrate = 120;  /* refresh rate (per second) for client mov
 #include "tatami.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "|+|",      tatami },  /* first entry is default */
+	{ "畳",       tatami },  /* first entry is default */
 	{ "[]=",      tile },    
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
