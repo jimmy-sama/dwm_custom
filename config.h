@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"kitty", 	      NULL,
+	"ghostty", 	      NULL,
 	"firefox", 	      NULL,
 	"mattermost-desktop", NULL,
 	NULL /* terminate */
@@ -54,9 +54,9 @@ static const int refreshrate = 120;  /* refresh rate (per second) for client mov
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "畳",       tatami },  /* first entry is default */
-	{ "[]=",      tile },    
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ "[]=",      tile },    
 };
 
 /* key definitions */
@@ -74,7 +74,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *rofi[]  = { "rofi", "-show", "drun", "-theme", "~/.config/rofi/config.rasi", NULL };
-static const char *termcmd[]  = { "kitty", NULL };
+static const char *termcmd[]  = { "ghostty", NULL };
 
 // brightness control keys
 static const char *brupcmd[] = {"brightnessctl", "set", "10%+", NULL};
