@@ -60,7 +60,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -100,6 +100,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = rofi } },
 	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_l,	   spawn,          SHCMD("slock")},
 	{ MODKEY,	                XK_w,	   spawn,          SHCMD("firefox")},
 	{ MODKEY,			XK_p,	   spawn,	   SHCMD("flameshot full -p ~/Pictures/Screenshots/")},
 	{ MODKEY|ShiftMask,		XK_p,	   spawn,	   SHCMD("flameshot gui -p  ~/Pictures/Screenshots/")},
