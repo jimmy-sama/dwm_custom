@@ -21,6 +21,8 @@ static const char *const autostart[] = {
 	"ghostty", 	      NULL,
 	"firefox", 	      NULL,
 	"mattermost-desktop", NULL,
+	"zotero", 	      NULL,
+	"anki", 	      NULL,
 	NULL /* terminate */
 };
 
@@ -39,6 +41,8 @@ static const Rule rules[] = {
 	// Fixed Position Windows
 	{ "firefox",          NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Mattermost",       NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Zotero",           NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "Anki",             NULL,       NULL,       1 << 4,       0,           -1 },
 
 };
 
